@@ -109,7 +109,7 @@ public class TnsSimpleTicTacToe {
 
 				// make sure space hasn't already been taken
 				if(gameboard[row][column] == '\u0000') {
-					boolean stalemate = false;
+					boolean stalemate = true;
 					boolean gameWon = false;
 
 					gameboard[row][column] = currentPlayerMarker;
@@ -148,8 +148,8 @@ public class TnsSimpleTicTacToe {
 					if(!gameWon) {
 						for(int i = 0, len = gameboard.length; i < len; i++) {
 							for(int j = 0; j < len; j++) {
-								if(gameboard[i][j] == ' ') {
-									stalemate = true;
+								if(gameboard[i][j] == '\u0000') {
+									stalemate = false;
 									break;
 								}
 
