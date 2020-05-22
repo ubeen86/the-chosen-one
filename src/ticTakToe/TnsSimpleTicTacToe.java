@@ -210,6 +210,7 @@ public class TnsSimpleTicTacToe {
 			}
 
 			System.out.println("\nGame Over!");
+			userInput.close();
 
 		} catch(Exception e) {
 
