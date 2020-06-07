@@ -2,7 +2,8 @@ package practice.loop;
 
 public class TripleLoopPractice {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		String[] dorms = {"Dorm A",
 							"Dorm B",
@@ -51,76 +52,24 @@ public class TripleLoopPractice {
 									 {"Jasmine"},
 									 {"Kevin", "Jessica", "Josiah"}
 								 }};
-		
+
 		String divider = "----------------------------------------------\n";
-		
-		
-/*
-
-Above, we have arrays of dorms, some classes that students in those dorms are taking,
-and the students in those classes. Here is an example of how the data ties together:
-
-Dorm: "Dorm A"
-Classes: "Intro to Music Theory", "Drawing 1", "Cardio Fitness", "Intro to Technology", "Accounting 1"
-
-Dorm A 1st Class: "Intro to Music Theory"
-"Amy", "Ben", "Tom"
-
-Dorm A 2nd Class: "Drawing 1"
-"Tom"
-
-Write a program that will display this information in the format below.
-Your solution should not use any if or switch statements. You should use loops to cycle through the data.
-
-SAMPLE OUTPUT:
-
-Dorm D
-Accounting 2
-Eric
-Walter
-Steven
-Total Students: 3
-
-Drawing 1
-Sam
-Total Students: 1
-
-Intro to Music Theory
-Ryan
-Ann
-Total Students: 2
-
-Ceramics 2
-Shannon
-David
-Total Students: 2
-
-Culinary 2
-Jack
-Total Students: 1
-
-----------------------------------------------
-
-Dorm E
-Drawing 1
-Jackson
-Total Students: 1
-
-Intro to Literature
-Jasmine
-Total Students: 1
-
-Programming 1
-Kevin
-Jessica
-Josiah
-Total Students: 3
-
-----------------------------------------------
-
-*/
-		
-		
+		for( int i = 0; i < dorms.length; i++)
+		{
+			System.out.println(dorms[i]);
+			System.out.println();
+			
+			for(  int k = 0, warp = classes[i].length;  k < warp; k++)
+			{
+				System.out.println(classes[i][k]);
+				System.out.println();	
+				
+				for(int r = 0, core = students[i][k].length; r < core; r++)
+				{
+					System.out.println(students[i][k][r]);
+					System.out.println();	
+				}
+			}
+		}
 	}
-
 }
