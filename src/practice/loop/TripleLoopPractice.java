@@ -57,6 +57,7 @@ public class TripleLoopPractice {
 		for( int i = 0; i < dorms.length; i++)
 		{
 			System.out.println(dorms[i]);
+			System.out.println(divider);
 			System.out.println();
 			
 			for(  int k = 0, warp = classes[i].length;  k < warp; k++)
@@ -67,7 +68,7 @@ public class TripleLoopPractice {
 				for(int r = 0, core = students[i][k].length; r < core; r++)
 				{
 					System.out.println(students[i][k][r]);
-					System.out.println();	
+					System.out.println();
 				}
 			}
 		}
